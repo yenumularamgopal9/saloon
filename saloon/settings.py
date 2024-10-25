@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'saloon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'hair_saloon_unis',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://hairsaloon:UnisHS@cluster0.khbcr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+        }
     }
 }
 
